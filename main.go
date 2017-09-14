@@ -48,12 +48,9 @@ func main()  {
       fmt.Println("spice:", order.Spice)
       fmt.Println("naan:", order.Naan)
       fmt.Println("notes:", order.Notes)
-      fmt.Println(orders)
     } else {
       fmt.Println(err)
     }
-
-    fmt.Println("Your IP is:", c.ClientIP())
 
     // Place order
     c.HTML(http.StatusOK, "order.html", gin.H{

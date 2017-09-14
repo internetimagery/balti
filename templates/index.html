@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  {{ template "head.html" . }}
+  <body>
+    <h1>Hello there!</h1>
+    <p>View the orders here.</p>
+    <form class="form" action="/" method="post">
+      <input type="text" name="innie" value="">
+      <button type="submit" name="button">Click me to submit!</button>
+    </form>
+  </body>
+  {{ template "footer.html" . }}
+</html>

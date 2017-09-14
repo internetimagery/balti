@@ -1,7 +1,7 @@
 package main
 
 import (
-  // "fmt"
+  "fmt"
   "net/http"
   "github.com/gin-gonic/gin"
 )
@@ -22,6 +22,8 @@ func main()  {
     })
   })
   router.POST("/", func(c *gin.Context) {
+    fmt.Println("meal: ")
+    fmt.Println(c.PostForm("meal"))
     // Place order
     c.HTML(http.StatusOK, "order.html", gin.H{
       "title": title,

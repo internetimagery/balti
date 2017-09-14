@@ -2,11 +2,32 @@
 <html>
   {{ template "head.html" . }}
   <body>
-    <h1>Hello there!</h1>
-    <p>View the orders here.</p>
+    <h1>Hello there! FROM BALTI!</h1>
     <form class="form" action="/" method="post">
-      <input type="text" name="innie" value="">
-      <button type="submit" name="button">Click me to submit!</button>
+      <fieldset>
+        <legend>Please pick your meal.</legend>
+        <input type="radio" name="meal" value="Milk" checked> Milk</br>
+        <input type="radio" name="meal" value="Cheese"> Cheese</br>
+        </br>
+        <label for="select">Spice:</label>
+        <select class="select" name="spice">
+          <option value="On fire">On fire</option>
+          <option value="Hot">Hot</option>
+          <option value="Medium">Medium</option>
+          <option value="Mild">Mild</option>
+        </select>
+        <label for="naan">Naan:</label>
+        <select class="naan" name="naan">
+          <option value="plain">plain</option>
+          <option value="cheese">cheese</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Please place your order.</legend>
+        <label for="notes">Final notes:</label>
+        <input type="text" name="notes" value="">
+        <button type="submit" name="button">Place Order</button>
+      </fieldset>
     </form>
   </body>
   {{ template "footer.html" . }}

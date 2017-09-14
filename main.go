@@ -21,6 +21,9 @@ type Order struct {
 
 
 func main()  {
+
+  orders := make(map[string]Order)
+
   // Set up our router
   router := gin.Default()
 
@@ -35,14 +38,17 @@ func main()  {
     })
   })
   router.POST("/", func(c *gin.Context) {
+    id := c.ClientIP() // Collect identifying information for the person
     var order Order
     err := c.Bind(&order)
     if err == nil {
+      orders[id] = order
       fmt.Println("Your order:\n")
       fmt.Println("meal:", order.Meal)
       fmt.Println("spice:", order.Spice)
       fmt.Println("naan:", order.Naan)
       fmt.Println("notes:", order.Notes)
+      fmt.Println(orders)
     } else {
       fmt.Println(err)
     }

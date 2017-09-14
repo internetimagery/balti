@@ -22,6 +22,7 @@ type Order struct {
 
 func main()  {
 
+  // Store orders
   orders := make(map[string]Order)
 
   // Set up our router
@@ -66,8 +67,8 @@ func main()  {
 
 
 
-  // Start server on port 6070
-  port := ":8080"
+  // Start server on port "balt" :8411
+  port := ":8411"
   router.Run(port)
 
 }

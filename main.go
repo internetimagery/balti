@@ -7,7 +7,7 @@ import (
 )
 
 // Shared info across all pages.
-const TITLE = "Balti Menu Order Form"
+const TITLE = "Balti Menu Order Form v1.0"
 
 
 // A single order
@@ -49,13 +49,15 @@ func main()  {
       fmt.Println("spice:", order.Spice)
       fmt.Println("naan:", order.Naan)
       fmt.Println("notes:", order.Notes)
+      fmt.Println("Orders: ", orders)
     } else {
-      fmt.Println(err)
+      fmt.Println("ERROR:", err)
     }
 
     // Place order
     c.HTML(http.StatusOK, "order.html", gin.H{
       "title": TITLE,
+      "order": orders[id],
     })
   })
   router.GET("/view", func(c *gin.Context) {

@@ -22,8 +22,13 @@ type Order struct {
 
 func main()  {
 
+
   // Store orders
   orders := make(map[string]Order)
+
+  // Set dev mode
+  gin.SetMode(gin.ReleaseMode)
+  // gin.SetMode(gin.DebugMode)
 
   // Set up our router
   router := gin.Default()
@@ -44,12 +49,7 @@ func main()  {
     err := c.Bind(&order)
     if err == nil {
       orders[id] = order
-      fmt.Println("Your order:\n")
-      fmt.Println("meal:", order.Meal)
-      fmt.Println("spice:", order.Spice)
-      fmt.Println("naan:", order.Naan)
-      fmt.Println("notes:", order.Notes)
-      fmt.Println("Orders: ", orders)
+      fmt.Println("Order placed by:", id, order)
     } else {
       fmt.Println("ERROR:", err)
     }
@@ -64,6 +64,7 @@ func main()  {
     // View orders
     c.HTML(http.StatusOK, "view.html", gin.H{
       "title": TITLE,
+      "orders": orders,
     })
   })
 
@@ -71,6 +72,7 @@ func main()  {
 
   // Start server on port "balt" :8411
   port := ":8411"
+  fmt.Println("Collecting orders on port", port)
   router.Run(port)
 
 }

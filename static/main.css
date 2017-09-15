@@ -1,9 +1,19 @@
 body, html {height:100%;}
-html {
+body {
   background-image: url("/static/bg1.png");
   background-size: cover;
   background-position: center;
 }
-/*body {
+html {
   background-image: url("/static/px1.jpg");
-}*/
+}
+.thing {
+  background: #ecdac0;
+  border: 4px solid #a98551;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+}

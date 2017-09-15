@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 5px;
+    text-align: left;
+    }
+</style>
+   </head>
   {{ template "head.html" . }}
   <body>
     <h1>Hello there!</h1>
     <p>Menu stuff goes here!</p>
+    <p>list of orders!!</p>
+    {{ range $key, $value := .orders }}
+    <p><b>{{$value.Side}}</b></p>
+    {{ end }}
+
+    <h2>Orders:</h2>
+    <table style="width:100%">
+    <tr>
+    <th>Name</th>
+    <th colspan="2">Meal</th>
+    <th>Side</th>
+    </tr>
+    <tr>
+    <td>Bill Gates</td>
+    <td>Spice</td>
+    <td>Meal</td>
+    <td>Side</td>
+  </tr>
+</table>
   </body>
   {{ template "footer.html" . }}
 </html>

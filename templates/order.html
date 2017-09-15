@@ -5,7 +5,7 @@
     <h1>Hello there!</h1>
     <p>Order placed successfully.</p>
     <p>Thank you!</p>
-    <p>{{ .order }}</p>
+    <p>you have ordered <b>{{ .order.Meal }}</b> with <b>{{.order.Side}}</b></p>
   </body>
   {{ template "footer.html" . }}
 </html>

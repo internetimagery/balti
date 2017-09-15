@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body, html {height:100%;}
 /*body {
   background-image: url("/static/bg1.png");
@@ -17,3 +18,20 @@ html {
   border-radius: 10px;
   padding: 10px;
 }*/
+=======
+table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #dddddd;
+  }
+>>>>>>> af7081821419d6a67082dc038743b3c315adcc4c

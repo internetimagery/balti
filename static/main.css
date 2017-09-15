@@ -1,5 +1,5 @@
 body, html {height:100%;}
-body {
+/*body {
   background-image: url("/static/bg1.png");
   background-size: cover;
   background-position: center;
@@ -16,4 +16,4 @@ html {
   width: 80%;
   border-radius: 10px;
   padding: 10px;
-}
+}*/

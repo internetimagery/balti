@@ -12,6 +12,7 @@ const TITLE = "Balti Menu Order Form v1.0"
 
 // A single order
 type Order struct {
+  Name string `form:"name" binding:"required"`
   Meal string `form:"meal" binding:"required"`
   Spice string `form:"spice" binding:"required"`
   Side string `form:"side" binding:"required"`
@@ -67,6 +68,8 @@ func main()  {
       "orders": orders,
     })
   })
+  // Load static files.
+  router.Static("/static", "./static")
 
 
 

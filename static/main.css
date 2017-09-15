@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Spirax";
+  src: url("/static/Spirax/Spirax-Regular.ttf");
+}
+@font-face {
+  font-family: "PTSerif";
+  src: url("/static/PT_Serif/PT_Serif-Web-Regular.ttf");
+}
+
 html, body {
   height: 100%;
 }
@@ -10,7 +19,29 @@ body {
   background-repeat: no-repeat;
 }
 
+.quote {
+  color: #f1c990;
+  text-align: center;
+}
 
+.header {
+  background-image: url("/static/top1.png");
+  height: 64px;
+  width: 100%;
+  text-align: center;
+  color: rgb(241, 201, 144);
+  font-size: 16px;
+  line-height: 58px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.body {
+
+}
 
 
 
@@ -23,14 +54,6 @@ details p{
 td{
   vertical-align: text-top;
 }
-
-.wrapper{
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-
-}
-
 
 body, html {height:100%;}
 

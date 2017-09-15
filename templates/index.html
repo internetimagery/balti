@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html>
-  {{ template "head.html" . }}
-  <body>
-    <div class="wrapper">
-    <h1>BALTI ORDERS</h1>
+{{ template "head.html" . }}
+<div class="row">
+  <div class="eight columns offset-by-two quote">
+    <p>
+      ...{{ .quote }}...
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="twelve columns body">
     <form class="form" action="/" method="post">
       <label for="name" style="color:DodgerBlue"><b>Name:</b></label>
       <input type="text" name="name" value="">
@@ -252,7 +256,6 @@
         <button type="submit" name="button">Place Order</button>
       </fieldset>
     </form>
-   </div>
-  </body>
-  {{ template "footer.html" . }}
-</html>
+  </div>
+</div>
+{{ template "footer.html" . }}

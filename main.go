@@ -1,7 +1,9 @@
 package main
 
 import (
+  "os"
   "fmt"
+  "strings"
   "net/http"
   "github.com/gin-gonic/gin"
 )
@@ -23,6 +25,8 @@ type Order struct {
 
 func main()  {
 
+  // Custom quote
+  quote := strings.Join(os.Args[1:], " ")
 
   // Store orders
   orders := make(map[string]Order)
@@ -42,6 +46,7 @@ func main()  {
     // Menu
     c.HTML(http.StatusOK, "index.html", gin.H{
       "title": TITLE,
+      "quote": quote,
     })
   })
   router.POST("/", func(c *gin.Context) {

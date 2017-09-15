@@ -4,19 +4,25 @@
     <fieldset class="panel">
       <legend class="panel-head">Orders</legend>
       <table>
-        <tr>
-        <th>Name</th>
-        <th colspan="2">Meal</th>
-        <th>Side</th>
-        </tr>
-        {{ range $key, $value := .orders }}
-        <tr>
-        <td style="color:DodgerBlue"><b>{{$value.Name}}</b></td>
-        <td><b>{{$value.Meal}}<b/></td>
-        <td style="color:Tomato"><em><b>{{$value.Spice}}</b></em></td>
-        <td><b>{{$value.Side}}</b></td>
-        </tr>
-        {{ end }}
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th colspan="2">Meal</th>
+            <th>Side</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range $key, $value := .orders }}
+          <tr>
+            <td style="color:DodgerBlue"><b>{{$value.Name}}</b></td>
+            <td><b>{{$value.Meal}}<b/></td>
+            <td style="color:Tomato"><em><b>{{$value.Spice}}</b></em></td>
+            <td><b>{{$value.Side}}</b></td>
+            <td><em>{{$value.Notes}}</em></td>
+          </tr>
+          {{ end }}
+        </tbody>
       </table>
   </fieldset>
   </div>

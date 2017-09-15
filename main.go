@@ -55,16 +55,20 @@ func main()  {
     err := c.Bind(&order)
     if err == nil {
       orders[id] = order
-      fmt.Println("Order placed by:", id, order)
+      fmt.Println("Order placed by:", id, order.Name, order)
+      // Place order
+      c.HTML(http.StatusOK, "order.html", gin.H{
+        "title": TITLE,
+        "order": orders[id],
+      })
     } else {
-      fmt.Println("ERROR:", err)
+      // Bad order. Ask to repeat.
+      c.HTML(http.StatusOK, "index.html", gin.H{
+        "title": TITLE,
+        "quote": "There was an issue with your order. Please try again.",
+      })
     }
 
-    // Place order
-    c.HTML(http.StatusOK, "order.html", gin.H{
-      "title": TITLE,
-      "order": orders[id],
-    })
   })
   router.GET("/view", func(c *gin.Context) {
     // View orders

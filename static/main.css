@@ -1,3 +1,19 @@
+details p{
+  font-style: italic;
+  font-weight: normal;
+}
+
+td{
+  vertical-align: text-top;
+}
+
+.wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
 table {
       font-family: arial, sans-serif;
       border-collapse: collapse;

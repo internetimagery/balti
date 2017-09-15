@@ -2,6 +2,7 @@
 <html>
   {{ template "head.html" . }}
   <body>
+    <div class="wrapper">
     <h1>BALTI ORDERS</h1>
     <form class="form" action="/" method="post">
       <label for="name" style="color:DodgerBlue"><b>Name:</b></label>
@@ -10,13 +11,13 @@
         <legend>Please pick your meal.</legend>
         <h2>MAINS - BALTI SPECIALS (Served with Rice and Plain Naan)</h2>
 
-        <table style="width:50%">
+        <table>
           <tr>
           <th>Meal</th>
           <th>Details</th>
           </tr>
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%"><input type="radio" name="meal" value="Choley Masala Balti" checked></td>
           <td width="95%"><b>
             <details>
               <summary>Choley Masala Balti</summary>
@@ -25,7 +26,7 @@
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%"><input type="radio" name="meal" value="Balti Vege Meat"></td>
           <td width="95%"><b>
             <details>
               <summary>Balti Vege Meat</summary>
@@ -34,7 +35,7 @@
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%"><input type="radio" name="meal" value=">Balti Puri Bhaji"></td>
           <td width="95%"><b>
             <details>
               <summary>Balti Puri Bhaji</summary>
@@ -43,7 +44,7 @@
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%"><input type="radio" name="meal" value="Balti Chhole Bhatura"></td>
           <td width="95%"><b>
             <details>
               <summary>Balti Chhole Bhatura</summary>
@@ -53,7 +54,7 @@
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%"><input type="radio" name="meal" value="Lamb and Tomato"></td>
           <td width="95%"><b>
             <details>
               <summary>Lamb and Tomato</summary>
@@ -62,7 +63,7 @@
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Lamb and Potato"></td>
           <td width="95%"><b>
             <details>
               <summary>Lamb and Potato</summary>
@@ -71,7 +72,7 @@
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Fish Balti"></td>
           <td width="95%"><b>
             <details>
               <summary>Fish Balti</summary>
@@ -80,7 +81,7 @@
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Chicken and Spinach"></td>
           <td width="95%"><b>
             <details>
               <summary>Chicken and Spinach</summary>
@@ -89,190 +90,131 @@
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Chicken and Broccoli"></td>
           <td width="95%"><b>
             <details>
               <summary>Chicken and Broccoli</summary>
               <p>Boneless chicken tikka with chunky broccoli in a medium balti sauce with herbs and spices. </p></br>
             </details><b/></td>
           </tr>
+        </table>
 
           <h2>MAINS - MUGHLAI SPECIALS (Served with Rice and Plain Naan)</h2>
 
+          <table>
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <th>Meal</th>
+          <th>Details</th>
+          </tr>
+
+          <tr>
+          <td width="5%" ><input type="radio" name="meal" value="Dal Makhani"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Dal Makhani</summary>
+              <p>An essential creamy lentil dish cooked to perfection with tomato and spices to complete your balti cuisine experience </p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Paneer Masala"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Paneer Masala</summary>
+              <p>Homemade Indian cottage cheese in a medium spiced gravy with sliced onions </p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Aloo Saag"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Aloo Saag</summary>
+              <p>Chunky Potato cooked with spinach in special spices</p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Vegetable Korma"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Vegetable Korma</summary>
+              <p>Vegetables in a very mild and rich gravy with cashew paste, cream and a touch of whole spices </p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Butter Chicken"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Butter Chicken</summary>
+              <p>Boneless chicken tikkas in a mildly spiced creamy gravy of tomato, cashew-nuts and herbs</p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Chicken Tikka Masala"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Chicken Tikka Masala</summary>
+              <p>Boneless chicken tikka in a medium spiced gravy with sliced onions </p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Chicken Korma"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Chicken Korma</summary>
+              <p>Boneless chicken cooked in a very mild and rich gravy with cashew paste, cream and a touch of whole spices</p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Chicken Jalfreizi"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Chicken Jalfreizi</summary>
+              <p>Chicken pieces with flavoured capsicum, lime and spices</p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Lamb Korma"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Lamb Korma</summary>
+              <p>Lamb cooked in a very mild and rich gravy with cashew paste, cream and a touch of whole spices</p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Lamb Saag"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Lamb Saag</summary>
+              <p>Lamb cooked in fresh spinach with tomato, garlic, ginger and spices </p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Lamb Madras"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Lamb Madras</summary>
+              <p>Diced lamb cooked in a coconut flavoured gravy.</p></br>
             </details><b/></td>
           </tr>
 
           <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
+          <td width="5%" ><input type="radio" name="meal" value="Lamb Kadhai"></td>
           <td width="95%"><b>
             <details>
-              <summary> </summary>
-              <p> </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
-          <td width="95%"><b>
-            <details>
-              <summary> </summary>
-              <p> </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
-          <td width="95%"><b>
-            <details>
-              <summary> </summary>
-              <p> </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
-          <td width="95%"><b>
-            <details>
-              <summary> </summary>
-              <p> </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
-          <td width="95%"><b>
-            <details>
-              <summary> </summary>
-              <p> </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
-          <td width="95%"><b>
-            <details>
-              <summary> </summary>
-              <p> </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
-          <td width="95%"><b>
-            <details>
-              <summary> </summary>
-              <p> </p></br>
-            </details><b/></td>
-          </tr>
-
-
-          <tr>
-          <td width="5%" style="color:Tomato"><b><input type="radio" name="meal" value="Choley Masala Balti" checked></b></td>
-          <td width="95%"><b>
-            <details>
-              <summary> </summary>
-              <p> </p></br>
+              <summary>Lamb Kadhai</summary>
+              <p>Lamb in cooked in onion and tomato gravy with capsicum</p></br>
             </details><b/></td>
           </tr>
         </table>
-
-
 
         </br>
         <label for="select">Spice:</label>
@@ -310,6 +252,7 @@
         <button type="submit" name="button">Place Order</button>
       </fieldset>
     </form>
+   </div>
   </body>
   {{ template "footer.html" . }}
 </html>

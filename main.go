@@ -14,7 +14,7 @@ const TITLE = "Balti Menu Order Form v1.0"
 type Order struct {
   Meal string `form:"meal" binding:"required"`
   Spice string `form:"spice" binding:"required"`
-  Naan string `form:"naan" binding:"required"`
+  Side string `form:"side" binding:"required"`
   Notes string `form:"notes"`
 }
 

@@ -60,6 +60,7 @@ func main()  {
       c.HTML(http.StatusOK, "order.html", gin.H{
         "title": TITLE,
         "order": orders[id],
+        "quote": "Thank you for your order.",
       })
     } else {
       // Bad order. Ask to repeat.
@@ -75,6 +76,7 @@ func main()  {
     c.HTML(http.StatusOK, "view.html", gin.H{
       "title": TITLE,
       "orders": orders,
+      "quote": "Below are all recent orders, for your booking pleasure.",
     })
   })
   // Load static files.

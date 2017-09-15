@@ -1,21 +1,24 @@
 {{ template "head.html" . }}
-<h2>Orders:</h2>
-
-<table style="width:50%">
-  <tr>
-  <th>Name</th>
-  <th colspan="2">Meal</th>
-  <th>Side</th>
-  </tr>
-  {{ range $key, $value := .orders }}
-  <tr>
-  <td width="30%" style="color:DodgerBlue"><b>{{$value.Name}}</b></td>
-  <td width="40%"><b>{{$value.Meal}}<b/></td>
-  <td width="10%" style="color:Tomato"><em><b>{{$value.Spice}}</b></em></td>
-  <td width="20%"><b>{{$value.Side}}</b></td>
-  </tr>
-  {{ end }}
-</table>
-
-</body>
+<div class="row">
+  <div class="twelve columns">
+    <fieldset class="panel">
+      <legend class="panel-head">Orders</legend>
+      <table>
+        <tr>
+        <th>Name</th>
+        <th colspan="2">Meal</th>
+        <th>Side</th>
+        </tr>
+        {{ range $key, $value := .orders }}
+        <tr>
+        <td style="color:DodgerBlue"><b>{{$value.Name}}</b></td>
+        <td><b>{{$value.Meal}}<b/></td>
+        <td style="color:Tomato"><em><b>{{$value.Spice}}</b></em></td>
+        <td><b>{{$value.Side}}</b></td>
+        </tr>
+        {{ end }}
+      </table>
+  </fieldset>
+  </div>
+</div>
 {{ template "footer.html" . }}

@@ -1,19 +1,10 @@
 {{ template "head.html" . }}
 <div class="row">
-  <div class="eight columns offset-by-two quote">
-    <p>
-      ...{{ .quote }}...
-    </p>
-  </div>
-</div>
-<div class="row">
   <div class="twelve columns body">
     <form class="form" action="/" method="post">
-      <label for="name" style="color:DodgerBlue"><b>Name:</b></label>
-      <input type="text" name="name" value="">
-      <fieldset>
-        <legend>Please pick your meal.</legend>
-        <h2>MAINS - BALTI SPECIALS (Served with Rice and Plain Naan)</h2>
+      <fieldset class="panel">
+        <legend class="panel-head">Please pick your meal.</legend>
+        <h5>MAINS - BALTI SPECIALS (Served with Rice and Plain Naan)</h5>
 
         <table>
           <tr>
@@ -103,7 +94,7 @@
           </tr>
         </table>
 
-          <h2>MAINS - MUGHLAI SPECIALS (Served with Rice and Plain Naan)</h2>
+          <h5>MAINS - MUGHLAI SPECIALS (Served with Rice and Plain Naan)</h5>
 
           <table>
           <tr>
@@ -219,16 +210,13 @@
             </details><b/></td>
           </tr>
         </table>
-
-        </br>
         <label for="select">Spice:</label>
         <select class="select" name="spice">
-          <option value="On fire">On fire</option>
-          <option value="Hot">Hot</option>
-          <option value="Medium">Medium</option>
           <option value="Mild">Mild</option>
+          <option value="Medium">Medium</option>
+          <option value="Hot">Hot</option>
+          <option value="On fire">On fire</option>
         </select>
-
         <label for="side">Side:</label>
         <select class="side" name="side">
           <option value="Plain Naan">Plain Naan</option>
@@ -246,14 +234,15 @@
           <option value="Poppadoms">Poppadoms</option>
           <option value="Raita">Raita</option>
           <option value="No naan">No naan</option>
-
         </select>
       </fieldset>
-      <fieldset>
-        <legend>Please place your order.</legend>
+      <fieldset class="panel">
+        <legend class="panel-head">Please place your order.</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="" onkeydown="if (event.keyCode == 13) return false;">
         <label for="notes">Final notes:</label>
-        <input type="text" name="notes" value="">
-        <button type="submit" name="button">Place Order</button>
+        <input type="text" name="notes" value="" onkeydown="if (event.keyCode == 13) return false;">
+        <button type="submit" name="button" class="button-primary">Place Order</button>
       </fieldset>
     </form>
   </div>

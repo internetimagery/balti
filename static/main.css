@@ -39,36 +39,52 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.body {
 
+.panel-head, .panel {
+  background-color: #ecdac0;
+  border-color: #a98551
 }
 
+.panel-head {
+  border-radius: 5px;
+  padding: 5px;
+  border-top: 2px solid #a98551;
+  /*border-left: 2px solid #a98551;*/
+  /*border-right: 2px solid #a98551;*/
+}
 
+.panel {
+  padding: 5px;
+  color: #372a28;
+  border-radius: 5px;
+  border: 2px solid #a98551;
+  box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.5);
+}
 
+h5 {
+  font-family: "Spirax", cursive;
+  color: #5d0000;
+  text-align: center;
+}
+
+th, td {
+  border: none;
+  vertical-align: text-top;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
 
 details p{
   font-style: italic;
   font-weight: normal;
 }
 
-td{
-  vertical-align: text-top;
-}
-
-body, html {height:100%;}
-
 table {
       font-family: arial, sans-serif;
       border-collapse: collapse;
       width: 100%;
-  }
-
-  td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-  }
-
-  tr:nth-child(even) {
-      background-color: #dddddd;
   }

@@ -1,17 +1,28 @@
 {{ template "head.html" . }}
-<h1>Order placed successfully.</h1>
-<h2>Order:</h2>
-<table style="width:50%">
-  <tr>
-  <th>Name</th>
-  <th colspan="2">Meal</th>
-  <th>Side</th>
-  </tr>
-  <tr>
-  <td width="30%" style="color:DodgerBlue"><b>{{.order.Name}}</b></td>
-  <td width="40%"><b>{{.order.Meal}}<b/></td>
-  <td width="10%" style="color:Tomato"><em><b>{{.order.Spice}}</b></em></td>
-  <td width="20%"><b>{{.order.Side}}</b></td>
-  </tr>
-</table>
+<div class="row">
+  <div class="twelve columns">
+    <fieldset class="panel">
+      <legend class="panel-head">Your Order</legend>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="2">Meal</th>
+          <th>Side</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:DodgerBlue"><b>{{.order.Name}}</b></td>
+          <td><b>{{.order.Meal}}<b/></td>
+            <td style="color:Tomato"><em><b>{{.order.Spice}}</b></em></td>
+            <td><b>{{.order.Side}}</b></td>
+            <td><b>{{.order.Note}}</b></td>
+          </tr>
+      </tbody>
+    </table>
+  </fieldset>
+  </div>
+</div>
 {{ template "footer.html" . }}

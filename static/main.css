@@ -1,9 +1,15 @@
-body, html {height:100%;}
-html {
-  background-image: url("/static/bg1.png");
-  background-size: cover;
-  background-position: center;
-}
-/*body {
-  background-image: url("/static/px1.jpg");
-}*/
+table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #dddddd;
+  }

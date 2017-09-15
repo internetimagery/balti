@@ -2,10 +2,22 @@
 <html>
   {{ template "head.html" . }}
   <body>
-    <h1>Hello there!</h1>
-    <p>Order placed successfully.</p>
-    <p>Thank you!</p>
-    <p>you have ordered <b>{{ .order.Meal }}</b> with <b>{{.order.Side}}</b></p>
+    <h1>Order placed successfully.</h1>
+    <h2>Order:</h2>
+  <table style="width:50%">
+    <tr>
+    <th>Name</th>
+    <th colspan="2">Meal</th>
+    <th>Side</th>
+    </tr>
+    <tr>
+    <td width="30%" style="color:DodgerBlue"><b>{{.order.Name}}</b></td>
+    <td width="40%"><b>{{.order.Meal}}<b/></td>
+    <td width="10%" style="color:Tomato"><em><b>{{.order.Spice}}</b></em></td>
+    <td width="20%"><b>{{.order.Side}}</b></td>
+    </tr>
+  </table>
+
   </body>
   {{ template "footer.html" . }}
 </html>

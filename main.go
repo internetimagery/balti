@@ -27,8 +27,8 @@ func main()  {
   orders := make(map[string]Order)
 
   // Set dev mode
-  gin.SetMode(gin.ReleaseMode)
-  // gin.SetMode(gin.DebugMode)
+  // gin.SetMode(gin.ReleaseMode)
+  gin.SetMode(gin.DebugMode)
 
   // Set up our router
   router := gin.Default()

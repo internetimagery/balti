@@ -6,6 +6,7 @@
     <p>Order placed successfully.</p>
     <p>Thank you!</p>
     <p>{{ .order }}</p>
+    <p>you have ordered {{ .order.Meal }} with {{.order.Naan}}</p>
   </body>
   {{ template "footer.html" . }}
 </html>

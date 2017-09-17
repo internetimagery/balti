@@ -5,6 +5,7 @@ import (
   "fmt"
   "strings"
   "net/http"
+  "path/filepath"
   "github.com/gin-gonic/gin"
 )
 
@@ -39,7 +40,9 @@ func main()  {
   router := gin.Default()
 
   // Load our template files and initialize some global variables
-  router.LoadHTMLGlob("templates/*.html")
+  app_path, _ := os.Executable()
+  root := filepath.Dir(app_path)
+  router.LoadHTMLGlob(filepath.Join(root, "templates", "*.html"))
 
   // Set up our routers
   router.GET("/", func(c *gin.Context) {
@@ -80,7 +83,7 @@ func main()  {
     })
   })
   // Load static files.
-  router.Static("/static", "./static")
+  router.Static("/static", filepath.Join(root, "static"))
 
 
 

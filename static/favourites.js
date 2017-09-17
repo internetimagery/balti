@@ -26,8 +26,7 @@
       }
       localStorage.spice = spice.value;
       localStorage.side = side.value;
-      localStorage.name = name.value;
-      return false;
+      return localStorage.name = name.value;
     };
   }
 

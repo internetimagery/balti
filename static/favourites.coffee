@@ -25,4 +25,3 @@ if typeof(Storage) != "undefined"
     localStorage.spice = spice.value
     localStorage.side = side.value
     localStorage.name = name.value
-    false

@@ -85,6 +85,7 @@ tr:nth-child(even) {
 details p{
   font-style: italic;
   font-weight: normal;
+  color: #57462d;
 }
 
 table {
@@ -92,3 +93,8 @@ table {
       border-collapse: collapse;
       width: 100%;
   }
+
+summary {
+  font-family: "PTSerif", serif;
+  color: #372a28;
+}

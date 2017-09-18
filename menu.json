@@ -1,19 +1,103 @@
 {
-  "mains": {
-    "main": {
-      "name" : "MAINS - BALTI SPECIALS (Served with Rice and Plain Naan)",
+  "mains": [
+    {
+      "name" : "specials",
+      "group" : "MAINS - BALTI SPECIALS (Served with Rice and Plain Naan)",
       "meals" : [
         {
-          "name": "meal 1",
-          "desc": "This meal is delicious"
+          "name": "Choley Masala Balti",
+            "desc": "Soft chickpeas in a medium spicy balti sauce cooked with chunky potatoes"
         },
         {
-          "name": "meal 2",
-          "desc": "This meal is also delicious"
+          "name": "Balti Vege Meat",
+            "desc": "A medium spicy Balti specialty with chunky soya meat"
+        },
+        {
+          "name": "Balti Puri Bhaji",
+            "desc": "Spicy potatoes with Balti gravy served with puffed whole wheat bread "
+        },
+        {
+          "name": "Balti Chhole Bhatura",
+            "desc": "Soft chickpeas in a medium spicy balti sauce cooked with chunky potatoes"
+        },
+        {
+          "name": "Lamb and Tomato",
+            "desc": "Diced tender cooked with chunky tomatoes"
+        },
+        {
+          "name": "Lamb and Potato",
+            "desc": "Lean diced lamb in a medium spicy Balti sauce with chunky potatoes and whole and ground spices and fresh herbs"
+        },
+        {
+          "name": "Fish Balti",
+            "desc": "Fish fried in a batter of mild spices and cooked in our special Balti sauce"
+        },
+        {
+          "name": "Chicken and Spinach",
+            "desc": "Boneless chicken tikkas cooked in a medium spicy balti sauce with sliced spinach and fresh herbs and spices "
+        },
+
+        {
+          "name": "Chicken and Broccoli",
+            "desc": "Boneless chicken tikka with chunky broccoli in a medium balti sauce with herbs and spices"
+        }
+      ]
+    },
+    {
+      "name" : "mughlai",
+      "group" : "MAINS - MUGHLAI SPECIALS (Served with Rice and Plain Naan)",
+      "meals" : [
+        {
+          "name": "Dal Makhani",
+            "desc": "An essential creamy lentil dish cooked to perfection with tomato and spices to complete your balti cuisine experience "
+        },
+        {
+          "name": "Paneer Masala",
+            "desc": "Homemade Indian cottage cheese in a medium spiced gravy with sliced onions "
+        },
+        {
+          "name": "Aloo Saag",
+            "desc": "Chunky Potato cooked with spinach in special spices"
+        },
+        {
+          "name": "Vegetable Korma",
+            "desc": "Vegetables in a very mild and rich gravy with cashew paste"
+        },
+        {
+          "name": "Butter Chicken",
+            "desc": "Boneless chicken tikkas in a mildly spiced creamy gravy of tomato"
+        },
+        {
+          "name": "Chicken Tikka Masala",
+            "desc": "Boneless chicken tikka in a medium spiced gravy with sliced onions "
+        },
+        {
+          "name": "Chicken Korma",
+            "desc": "Boneless chicken cooked in a very mild and rich gravy with cashew paste"
+        },
+        {
+          "name": "Chicken Jalfreizi",
+            "desc": "Chicken pieces with flavoured capsicum"
+        },
+        {
+          "name": "Lamb Korma",
+            "desc": "Lamb cooked in a very mild and rich gravy with cashew paste"
+        },
+        {
+          "name": "Lamb Saag",
+            "desc": "Lamb cooked in fresh spinach with tomato"
+        },
+        {
+          "name": "Lamb Madras",
+            "desc": "Diced lamb cooked in a coconut flavoured gravy"
+        },
+        {
+          "name": "Lamb Kadhai",
+            "desc": "Lamb in cooked in onion and tomato gravy with capsicum"
         }
       ]
     }
-  },
+  ],
   "spice": [
     "Mild",
     "Medium",

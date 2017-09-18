@@ -31,10 +31,11 @@ type Meal struct {
 
 type Category struct {
   Name string
+  Group string
   Meals []Meal
 }
 
-type Menu map[string]Category
+type Menu []Category
 
 type Food struct {
   Mains Menu

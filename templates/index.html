@@ -4,240 +4,45 @@
     <form id="form" class="form" action="/" method="post">
       <fieldset class="panel">
         <legend class="panel-head">Please pick your meal.</legend>
-        <h5>MAINS - BALTI SPECIALS (Served with Rice and Plain Naan)</h5>
 
-        <table>
-          <thead>
-          <tr>
-          <th>Meal</th>
-          <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-          <td width="5%"><input class="meal" type="radio" name="meal" value="Choley Masala Balti"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Choley Masala Balti</summary>
-              <p>Soft chickpeas in a medium spicy balti sauce cooked with chunky potatoes, tomatoes and fresh balti herbs and spices.</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%"><input class="meal" type="radio" name="meal" value="Balti Vege Meat"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Balti Vege Meat</summary>
-              <p>A medium spicy Balti specialty with chunky soya meat; a complete vegetarian delight.</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%"><input class="meal" type="radio" name="meal" value=">Balti Puri Bhaji"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Balti Puri Bhaji</summary>
-              <p>Spicy potatoes with Balti gravy served with puffed whole wheat bread (puri).</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%"><input class="meal" type="radio" name="meal" value="Balti Chhole Bhatura"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Balti Chhole Bhatura</summary>
-              <p>Soft chickpeas in a medium spicy balti sauce cooked with chunky potatoes,
-                tomatoes and fresh balti herbs and spices, served with deep fried bread.</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%"><input class="meal" type="radio" name="meal" value="Lamb and Tomato"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Lamb and Tomato</summary>
-              <p>Diced tender cooked with chunky tomatoes, sliced onions and fresh balti spices.</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Lamb and Potato"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Lamb and Potato</summary>
-              <p>Lean diced lamb in a medium spicy Balti sauce with chunky potatoes and whole and ground spices and fresh herbs.</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Fish Balti"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Fish Balti</summary>
-              <p>Fish fried in a batter of mild spices and cooked in our special Balti sauce</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Chicken and Spinach"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Chicken and Spinach</summary>
-              <p>Boneless chicken tikkas cooked in a medium spicy balti sauce with sliced spinach and fresh herbs and spices </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Chicken and Broccoli"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Chicken and Broccoli</summary>
-              <p>Boneless chicken tikka with chunky broccoli in a medium balti sauce with herbs and spices. </p></br>
-            </details><b/></td>
-          </tr>
-        </tbody>
-        </table>
-
-          <h5>MAINS - MUGHLAI SPECIALS (Served with Rice and Plain Naan)</h5>
-
+        <!-- Meals -->
+        {{ range $group, $food := .menu.Mains }}
+          <h5>{{ $food.Name }}</h5>
           <table>
-          <tr>
-          <th>Meal</th>
-          <th>Details</th>
-          </tr>
+            <thead>
+              <tr>
+                <th>Meal</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range $meal := $food.Meals }}
+                <tr>
+                  <td width="5%"><input class="{{ $group }}" type="radio" name="{{ $group }}" value="{{ $meal.Name }}"></td>
+                  <td width="95%"><b>
+                    <details>
+                      <summary>{{ $meal.Name }}</summary>
+                      <p>{{ $meal.Desc }}</p></br>
+                    </details><b/>
+                  </td>
+                </tr>
+              {{ end }}
+            </tbody>
+          </table>
+        {{ end }}
 
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Dal Makhani"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Dal Makhani</summary>
-              <p>An essential creamy lentil dish cooked to perfection with tomato and spices to complete your balti cuisine experience </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Paneer Masala"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Paneer Masala</summary>
-              <p>Homemade Indian cottage cheese in a medium spiced gravy with sliced onions </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Aloo Saag"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Aloo Saag</summary>
-              <p>Chunky Potato cooked with spinach in special spices</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Vegetable Korma"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Vegetable Korma</summary>
-              <p>Vegetables in a very mild and rich gravy with cashew paste, cream and a touch of whole spices </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Butter Chicken"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Butter Chicken</summary>
-              <p>Boneless chicken tikkas in a mildly spiced creamy gravy of tomato, cashew-nuts and herbs</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Chicken Tikka Masala"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Chicken Tikka Masala</summary>
-              <p>Boneless chicken tikka in a medium spiced gravy with sliced onions </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Chicken Korma"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Chicken Korma</summary>
-              <p>Boneless chicken cooked in a very mild and rich gravy with cashew paste, cream and a touch of whole spices</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Chicken Jalfreizi"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Chicken Jalfreizi</summary>
-              <p>Chicken pieces with flavoured capsicum, lime and spices</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Lamb Korma"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Lamb Korma</summary>
-              <p>Lamb cooked in a very mild and rich gravy with cashew paste, cream and a touch of whole spices</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Lamb Saag"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Lamb Saag</summary>
-              <p>Lamb cooked in fresh spinach with tomato, garlic, ginger and spices </p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Lamb Madras"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Lamb Madras</summary>
-              <p>Diced lamb cooked in a coconut flavoured gravy.</p></br>
-            </details><b/></td>
-          </tr>
-
-          <tr>
-          <td width="5%" ><input class="meal" type="radio" name="meal" value="Lamb Kadhai"></td>
-          <td width="95%"><b>
-            <details>
-              <summary>Lamb Kadhai</summary>
-              <p>Lamb in cooked in onion and tomato gravy with capsicum</p></br>
-            </details><b/></td>
-          </tr>
-        </table>
+        <!-- Spice  -->
         <label for="select">Spice:</label>
         <select id="spice" class="select" name="spice">
-          <option value="Mild">Mild</option>
-          <option value="Medium">Medium</option>
-          <option value="Hot">Hot</option>
-          <option value="On fire">On fire</option>
+          {{ range $spice := .menu.Spice }}
+            <option value="{{ $spice }}">{{ $spice }}</option>
+          {{ end }}
         </select>
         <label for="side">Side:</label>
         <select id="side" class="side" name="side">
-          <option value="Plain Naan">Plain Naan</option>
-          <option value="Roti">Roti</option>
-          <option value="Mince Naan">Mince Naan</option>
-          <option value="Peshwari Naan">Peshwari Naan</option>
-          <option value="Chicken Naan">Chicken Naan</option>
-          <option value="Onion Potato Naan">Onion Potato Naan</option>
-          <option value="Garlic Naan">Garlic Naan</option>
-          <option value="Garlic Cheese Naan">Garlic Cheese Naan</option>
-          <option value="Cheese Naan">Cheese Naan</option>
-          <option value="Butter Naan">Butter Naan</option>
-          <option value="Parantha">Parantha</option>
-          <option value="Pickle/Mango Chutney">Pickle/Mango Chutney</option>
-          <option value="Poppadoms">Poppadoms</option>
-          <option value="Raita">Raita</option>
-          <option value="No naan">No naan</option>
+          {{ range $side := .menu.Side }}
+            <option value="{{ $side }}">{{ $side }}</option>
+          {{ end }}
         </select>
       </fieldset>
       <fieldset class="panel">

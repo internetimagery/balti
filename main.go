@@ -4,7 +4,9 @@ import (
   "os"
   "fmt"
   "strings"
+  "io/ioutil"
   "net/http"
+  "encoding/json"
   "path/filepath"
   "github.com/gin-gonic/gin"
 )
@@ -22,9 +24,39 @@ type Order struct {
   Notes string `form:"notes"`
 }
 
+type Meal struct {
+  Name string
+  Desc string
+}
 
+type Category struct {
+  Name string
+  Meals []Meal
+}
+
+type Menu map[string]Category
+
+type Food struct {
+  Mains Menu
+  Spice []string
+  Side []string
+}
 
 func main()  {
+  // Where are we?
+  app_path, _ := os.Executable()
+  root := filepath.Dir(app_path)
+
+  // Load menu information
+  data, err := ioutil.ReadFile(filepath.Join(root, "menu.json"))
+  if err != nil {
+    panic(err)
+  }
+  var menu Food
+  err = json.Unmarshal(data, &menu)
+  if err != nil {
+    panic(err)
+  }
 
   // Custom quote
   quote := strings.Join(os.Args[1:], " ")
@@ -40,8 +72,7 @@ func main()  {
   router := gin.Default()
 
   // Load our template files and initialize some global variables
-  app_path, _ := os.Executable()
-  root := filepath.Dir(app_path)
+
   router.LoadHTMLGlob(filepath.Join(root, "templates", "*.html"))
 
   // Set up our routers
@@ -50,6 +81,7 @@ func main()  {
     c.HTML(http.StatusOK, "index.html", gin.H{
       "title": TITLE,
       "quote": quote,
+      "menu": menu,
     })
   })
   router.POST("/", func(c *gin.Context) {
@@ -91,5 +123,4 @@ func main()  {
   port := ":8411"
   fmt.Println("Collecting orders on port", port)
   router.Run(port)
-
 }

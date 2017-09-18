@@ -1,0 +1,40 @@
+{
+  "mains": {
+    "main": {
+      "name" : "MAINS - BALTI SPECIALS (Served with Rice and Plain Naan)",
+      "meals" : [
+        {
+          "name": "meal 1",
+          "desc": "This meal is delicious"
+        },
+        {
+          "name": "meal 2",
+          "desc": "This meal is also delicious"
+        }
+      ]
+    }
+  },
+  "spice": [
+    "Mild",
+    "Medium",
+    "Hot",
+    "On Fire!"
+  ],
+  "side" : [
+    "Plain Naan",
+    "Roti",
+    "Mince Naan",
+    "Peshwari Naan",
+    "Chicken Naan",
+    "Onion Potato Naan",
+    "Garlic Naan",
+    "Garlic Cheese Naan",
+    "Cheese Naan",
+    "Butter Naan",
+    "Parantha",
+    "Pickle/Mango Chutney",
+    "Poppadoms",
+    "Raita",
+    "No naan"
+  ]
+}

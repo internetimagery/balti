@@ -15,7 +15,13 @@
       <tbody>
         <tr>
           <td style="color:DodgerBlue"><b>{{.order.Name}}</b></td>
-          <td><b>{{.order.Meal}}<b/></td>
+            <td>
+                <ul>
+                  {{ range $meal := .order.Meal }}
+                  <li>{{ $meal }}</li>
+                  {{ end }}
+              </ul>
+            </td>
             <td style="color:Tomato"><em><b>{{.order.Spice}}</b></em></td>
             <td><b>{{.order.Side}}</b></td>
             <td><em>{{.order.Notes}}</em></td>

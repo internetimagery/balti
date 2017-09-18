@@ -6,8 +6,8 @@
         <legend class="panel-head">Please pick your meal.</legend>
 
         <!-- Meals -->
-        {{ range $group, $food := .menu.Mains }}
-          <h5>{{ $food.Name }}</h5>
+        {{ range $food := .menu.Mains }}
+          <h5>{{ $food.Group }}</h5>
           <table>
             <thead>
               <tr>
@@ -18,7 +18,7 @@
             <tbody>
               {{ range $meal := $food.Meals }}
                 <tr>
-                  <td width="5%"><input class="{{ $group }}" type="radio" name="{{ $group }}" value="{{ $meal.Name }}"></td>
+                  <td width="5%"><input class="meal" type="checkbox" name="meal[]" value="{{ $meal.Name }}"></td>
                   <td width="95%"><b>
                     <details>
                       <summary>{{ $meal.Name }}</summary>
@@ -50,7 +50,7 @@
         <label for="name">Name:</label>
         <input id="name" type="text" name="name" value="" onkeydown="if (event.keyCode == 13) return false;">
         <label for="notes">Final notes:</label>
-        <input type="text" name="notes" value="" onkeydown="if (event.keyCode == 13) return false;">
+        <input id="notes" type="text" name="notes" value="" onkeydown="if (event.keyCode == 13) return false;">
         <button type="submit" name="button" class="button-primary">Place Order</button>
       </fieldset>
     </form>

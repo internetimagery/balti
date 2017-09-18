@@ -16,7 +16,13 @@
           {{ range $key, $value := .orders }}
           <tr>
             <td style="color:DodgerBlue"><b>{{$value.Name}}</b></td>
-            <td><b>{{$value.Meal}}<b/></td>
+            <td>
+              <ul>
+                {{ range $meal := $value.Meal }}
+                <li>{{ $meal }}</li>
+                {{ end }}
+              </ul>
+            </td>
             <td style="color:Tomato"><em><b>{{$value.Spice}}</b></em></td>
             <td><b>{{$value.Side}}</b></td>
             <td><em>{{$value.Notes}}</em></td>

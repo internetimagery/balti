@@ -18,7 +18,7 @@ const TITLE = "Balti Menu Order Form v1.0"
 // A single order
 type Order struct {
   Name string `form:"name" binding:"required"`
-  Meal string `form:"meal" binding:"required"`
+  Meal []string `form:"meal[]"`
   Spice string `form:"spice" binding:"required"`
   Side string `form:"side" binding:"required"`
   Notes string `form:"notes"`
@@ -100,9 +100,10 @@ func main()  {
       })
     } else {
       // Bad order. Ask to repeat.
-      c.HTML(http.StatusOK, "index.html", gin.H{
+      c.HTML(http.StatusNotAcceptable, "index.html", gin.H{
         "title": TITLE,
         "quote": "There was an issue with your order. Please try again.",
+        "menu": menu,
       })
     }
 

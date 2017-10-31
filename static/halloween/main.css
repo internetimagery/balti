@@ -1,0 +1,47 @@
+html {
+  background-image: url("/static/halloween/skulltile.png");
+  background-repeat: repeat;
+  background-size: 20%;
+}
+
+body {
+  background-image: none;
+}
+
+.logo {
+  background-image: url("/static/halloween/logo.png");
+  background-position: center;
+  height: 0px;
+  width: 0px;
+  padding-left: 512px;
+  padding-top: 218px;
+  position: relative;
+}
+
+.container .row:first-child {
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.panel {
+  color: white;
+  background-color: rgb(10,10,10);
+  border-color: lime;
+}
+.panel-head {
+  background-color: lime;
+  color: black;
+  border: lime;
+}
+
+summary {
+  color: lightgrey;
+}
+
+details p {
+  color: grey;
+}
+
+h5 {
+  color: red;
+}
